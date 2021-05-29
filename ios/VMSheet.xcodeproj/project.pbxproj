@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8CA83DA12662B949003083D3 /* wmelon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA83DA02662B949003083D3 /* wmelon.swift */; };
 		BD9206CEC14FD3F5618BBF32 /* libPods-VMSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9ACF77E771A82612EDB176C /* libPods-VMSheet.a */; };
 		ECF25FBDE81BE421CACD6818 /* libPods-VMSheet-VMSheetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2CEBDE85EBC079EE49A2F5 /* libPods-VMSheet-VMSheetTests.a */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,8 @@
 		1B2CEBDE85EBC079EE49A2F5 /* libPods-VMSheet-VMSheetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VMSheet-VMSheetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECFD6C874332993AC34C7B5 /* Pods-VMSheet-VMSheetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMSheet-VMSheetTests.release.xcconfig"; path = "Target Support Files/Pods-VMSheet-VMSheetTests/Pods-VMSheet-VMSheetTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = VMSheet/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CA83D9F2662B948003083D3 /* VMSheet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VMSheet-Bridging-Header.h"; sourceTree = "<group>"; };
+		8CA83DA02662B949003083D3 /* wmelon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wmelon.swift; sourceTree = "<group>"; };
 		9A66898BED3A1F27EA40468A /* Pods-VMSheet-VMSheetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMSheet-VMSheetTests.debug.xcconfig"; path = "Target Support Files/Pods-VMSheet-VMSheetTests/Pods-VMSheet-VMSheetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9ACF77E771A82612EDB176C /* libPods-VMSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VMSheet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF08A521FCE0601377213B84 /* Pods-VMSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMSheet.release.xcconfig"; path = "Target Support Files/Pods-VMSheet/Pods-VMSheet.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,12 +119,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8CA83DA02662B949003083D3 /* wmelon.swift */,
 				13B07FAE1A68108700A75B9A /* VMSheet */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* VMSheetTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				9C6539B88F453FA6BAF2DF70 /* Pods */,
+				8CA83D9F2662B948003083D3 /* VMSheet-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,7 +150,6 @@
 				9A66898BED3A1F27EA40468A /* Pods-VMSheet-VMSheetTests.debug.xcconfig */,
 				7ECFD6C874332993AC34C7B5 /* Pods-VMSheet-VMSheetTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1210;
 					};
 				};
 			};
@@ -413,6 +417,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				8CA83DA12662B949003083D3 /* wmelon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A66898BED3A1F27EA40468A /* Pods-VMSheet-VMSheetTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7ECFD6C874332993AC34C7B5 /* Pods-VMSheet-VMSheetTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = VMSheetTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = VMSheet;
+				SWIFT_OBJC_BRIDGING_HEADER = "VMSheet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = VMSheet;
+				SWIFT_OBJC_BRIDGING_HEADER = "VMSheet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
